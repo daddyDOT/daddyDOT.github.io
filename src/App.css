@@ -1,5 +1,199 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+@media only screen and (max-width: 768px) {
+  nav {
+    justify-content: flex-end;
+    height: 40px !important;
+  }
+  nav p {
+    display: none;
+  }
+  nav div {
+    display: none;
+  }
+  ul {
+    display: none;
+  }
+  nav .Menu {
+    display: block !important;
+    margin-right: 10%;
+    background-color: #f0f8ff00;
+  }
+  /*------------------*/
+  .Upper {
+    height: 70vh !important;
+    flex-direction: column !important;
+    align-items: center;
+    justify-content: center !important;
+  }
+  .Heading {
+    margin-left: 0px !important;
+    align-self: center;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .Heading .Image {
+    display: block !important;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 1px #000;
+    margin-top: 2%;
+
+    background-position: center;
+    background-size: cover;
+    background-image: url('./assets/images/ring-pic.png');
+  }
+  .Heading hr {
+    height: 1px !important;
+    width: 50%;
+    background-color: #000;
+    opacity: 0.1;
+  }
+  .Description {
+    font-size: 13px !important;
+    width: 60% !important;
+    margin-inline: 10%;
+    margin-top: 10%;
+    order: 1;
+  }
+  h1 {
+    font-size: 35px !important;
+    margin-top: 0px !important;
+    order: -1;
+  }
+  h5 {
+    font-size: 13px !important;
+    order: -1;
+  }
+  .Unnecessary {
+    font-size: 10px !important;
+    order: -1;
+    margin-bottom: 10%;
+  }
+  /*------------------*/
+  .Portrait {
+    display: none;
+  }
+  /*------------------*/
+  .Footer {
+    background-color: #202227;
+    height: 300px;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center !important;
+  }
+  .Footer .Info {
+    text-align: center !important;
+    align-self: center;
+    color: rgb(77, 77, 77);
+  }
+  .Footer .Info h5 {
+    font-size: 10px !important;
+  }
+  .Footer .Info h2 {
+    font-size: 20px !important;
+  }
+  .Footer .Info p {
+    font-size: 10px !important;
+    align-self: center;
+    width: 100% !important;
+  }
+  .Footer .Info a {
+    color: #e9e9e9;
+    text-decoration: underline;
+  }
+  .Footer hr {
+    display: block !important;
+    height: 1px !important;
+    opacity: 0.1;
+  }
+  .Socials {
+    margin-left: 0px !important;
+  }
+  .Socials .Icons {
+    justify-content: space-between;
+  }
+  .Socials .Icon {
+    font-size: 20px !important;
+    margin-inline: 10px;
+  }
+  .Socials p {
+    font-size: 10px !important;
+    text-align: center;
+  }
+  .Socials p i {
+    color: rgb(253, 80, 80);
+  }
+  /*------------------*/
+  .Disclaimer {
+    font-size: 10px !important;
+  }
+  /*------------------*/
+  .Info {
+    margin-left: 10vw;
+    margin-right: 10vw;
+    text-align: left;
+    align-self: center;
+    color: rgb(77, 77, 77);
+  }
+  .Info h5 {
+    font-size: 10px !important;
+  }
+  .Info h2 {
+    font-size: 20px !important;
+  }
+  .Info p {
+    font-size: 10px !important;
+    color: black;
+    letter-spacing: 0.5px !important;
+  }
+  .Images {
+    flex-direction: column !important;
+    margin-right: 10vw;
+  }
+  .Images .Card {
+    width: 100% !important;
+    height: 100px !important;
+    margin-bottom: 10%;
+  }
+  /*------------------*/
+  .Projects {
+    margin-top: -15% !important;
+  }
+  .Projects .Info {
+    text-align: left;
+    align-self: center;
+    color: rgb(77, 77, 77);
+  }
+  .Projects .Info h5 {
+    font-size: 10px !important;
+  }
+  .Projects .Info h2 {
+    font-size: 20px !important;
+  }
+  .Projects .Info p {
+    width: 100% !important;
+  }
+  .Projects .Repositories {
+    flex-direction: column;
+    margin-right: 10vw;
+  }
+  .Projects .Repo {
+    width: 100%;
+    margin-bottom: 5%;
+  }
+  .Projects .Repo div {
+    font-size: 10px !important;
+    align-self: center;
+  }
+  .Projects .Repo span {
+    font-size: 15px !important;
+  }
+}
+
 * {
   font-family: 'Inter', sans-serif;
 }
@@ -17,10 +211,6 @@ hr {
   background-color: #EAEAEA;
   margin-top: 5vh;
   margin-bottom: 5vh;
-}
-/*------------------*/
-.Root {
-  height: 2000px;
 }
 /*------------------*/
 nav {
@@ -56,9 +246,11 @@ li a {
   color: rgb(77, 77, 77);
   font-weight: 300;
 }
+nav .Menu {
+  display: none;
+}
 /*------------------*/
 .Upper {
-
   background: rgb(220,234,255);
   background: radial-gradient(circle, rgba(220,234,255,1) 0%, rgb(238, 238, 238) 60%);
   height: 100vh;
@@ -72,6 +264,12 @@ li a {
 }
 .Heading {
   margin-left: 10vw;
+}
+.Heading .Image {
+  display: none;
+}
+.Heading hr {
+  display: none;
 }
 .Description {
   font-weight: 200;
@@ -237,6 +435,9 @@ h5 {
 .Footer .Info a {
   color: #e9e9e9;
   text-decoration: underline;
+}
+.Footer hr {
+  display: none;
 }
 .Socials {
   display: flex;

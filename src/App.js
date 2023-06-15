@@ -1,6 +1,7 @@
 import './App.css';
 import { GithubCard } from "github-user-repo-card";
 import { FaFacebook, FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { CgMenu } from 'react-icons/cg';
 
 const App = () => {
   return (
@@ -15,12 +16,17 @@ const App = () => {
           <li><a href="#Projects">Projects</a></li>
           <li><a href="#Footer">Contact</a></li>
         </ul>
+        <div className='Menu'>
+          <CgMenu />
+        </div>
       </nav>
       
       {/* upper */}
       <div className='Upper' id='Upper'>
         <div className='Heading'>
           <p className='Description'>A passionate and hard-working individual, interested in programming</p>
+          <div className='Image'></div>
+          <hr />
           <h1>Hello there!</h1>
           <h5>My name is Ahmed Spahić</h5>
           <p className='Unnecessary'>or daddyDOT, if you like it more 😏</p>
@@ -65,8 +71,8 @@ const App = () => {
         </div>
 
         <div className='Repositories'>
-          <div className='Repo'><GithubCard name="daddyDOT" type="repo" repository="top-gear" width={500} height={150} /></div>
-          <div className='Repo'><GithubCard name="daddyDOT" type="repo" repository="top-gear" width={500} height={150} /></div>
+          <div className='Repo'><GithubCard name="daddyDOT" type="repo" repository="top-gear" /></div>
+          <div className='Repo'><GithubCard name="daddyDOT" type="repo" repository="top-gear" /></div>
         </div>
       </div>
 
@@ -82,6 +88,8 @@ const App = () => {
           <p>Made with <i>♥</i> by Ahmed Spahić</p>
         </div>
         
+        <hr />
+
         <div className='Info'>
           <h5>CONTACT</h5>
           <h2>See you again soon! 👋</h2>

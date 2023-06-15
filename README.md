@@ -1,2 +1,2 @@
 # My portfolio
-Readme will be updated soon, as well as the portfolio 😪
+Soon enough it will get more functionalities including responsiveness, API integration etc.

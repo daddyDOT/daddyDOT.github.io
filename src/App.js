@@ -76,7 +76,7 @@ const App = () => {
 
         <div className='Repositories'>
           <div className='Repo'><GithubCard name="daddyDOT" type="repo" repository="top-gear" /></div>
-          <div className='Repo'><GithubCard name="daddyDOT" type="repo" repository="top-gear" /></div>
+          <div className='Repo'><GithubCard name="daddyDOT" type="repo" repository="daddyDOT.github.io" /></div>
         </div>
       </div>
 

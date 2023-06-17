@@ -2,22 +2,33 @@
 
 @media only screen and (max-width: 768px) {
   nav {
-    justify-content: flex-end;
-    height: 40px !important;
+    justify-content: center;
+    height: 50px !important;
+    bottom: 0;
+    border-top-left-radius: 10%;
+    border-top-right-radius: 10%;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   }
   nav p {
     display: none;
   }
-  nav div {
+  nav .Break {
     display: none;
   }
   ul {
     display: none;
   }
   nav .Menu {
-    display: block !important;
-    margin-right: 10%;
+    display: flex !important;
     background-color: #f0f8ff00;
+    width: 60%;
+    justify-content: space-between;
+  }
+  nav .Menu svg {
+    font-size: 20px;
+    color: #8686f8;
+    text-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    filter: drop-shadow(2px 4px 6px #7b76a6);
   }
   /*------------------*/
   .Upper {
@@ -80,7 +91,7 @@
   /*------------------*/
   .Footer {
     background-color: #202227;
-    height: 300px;
+    height: 400px !important;
     display: flex;
     flex-direction: column-reverse;
     justify-content: center !important;
@@ -224,7 +235,7 @@ nav {
 nav p {
   margin-left: 10vw;
 }
-nav div {
+nav .Break {
   width: 1px;
   height: 40%;
   margin-left: 3vw;

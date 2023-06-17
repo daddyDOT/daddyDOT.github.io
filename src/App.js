@@ -1,7 +1,8 @@
 import './App.css';
 import { GithubCard } from "github-user-repo-card";
 import { FaFacebook, FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
-import { CgMenu } from 'react-icons/cg';
+import { SiAboutdotme } from 'react-icons/si';
+import { AiOutlineProject, AiOutlineArrowUp, AiOutlineQuestion } from 'react-icons/ai';
 
 const App = () => {
   return (
@@ -9,7 +10,7 @@ const App = () => {
       {/* navbar */}
       <nav>
         <p>😎 daddyDOT.github.io</p>
-        <div></div>
+        <div className='Break'></div>
         <ul>
           <li><a href="#Upper">Top</a></li>
           <li><a href="#About">About me</a></li>
@@ -17,7 +18,10 @@ const App = () => {
           <li><a href="#Footer">Contact</a></li>
         </ul>
         <div className='Menu'>
-          <CgMenu />
+        <a href="#Upper"><AiOutlineArrowUp /></a>
+        <a href="#About"><SiAboutdotme /></a>
+        <a href="#Projects"><AiOutlineProject /></a>
+        <a href="#Footer"><AiOutlineQuestion /></a>
         </div>
       </nav>
       

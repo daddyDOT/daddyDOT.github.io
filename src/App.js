@@ -3,8 +3,19 @@ import { GithubCard } from "github-user-repo-card";
 import { FaFacebook, FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
 import { SiAboutdotme } from 'react-icons/si';
 import { AiOutlineProject, AiOutlineArrowUp, AiOutlineQuestion } from 'react-icons/ai';
+import { useEffect, useState } from 'react';
+import fetchRepoCount from './hooks/fetchRepoCount';
 
 const App = () => {
+  const [Projects, setProjects] = useState(0);
+
+  useEffect(() => {
+    const Function = async () => {
+      setProjects(await fetchRepoCount());
+    }
+    Function();
+  }, [])
+  
   return (
     <div className='Root'>
       {/* navbar */}
@@ -67,7 +78,7 @@ const App = () => {
       <div className='Projects' id='Projects'>
         <div className='Info'>
           <h5>PROJECTS</h5>
-          <h2>There are currently X repositories signed as<br /><i>#project</i></h2>
+          <h2>There are currently {Projects} repositories signed as<br /><i>#project</i></h2>
           <p>As an individual who is always seeking new challenges and opportunities, I find myself constantly intrigued by innovative projects. The thrill of diving into uncharted territory and pushing the boundaries of what is possible truly captivates my spirit. I am driven by a relentless desire to grow both personally and professionally, and I believe that engaging in exciting new ventures is the key to unlocking my full potential.</p>
           <p>While I take immense pride in my accomplishments, I also recognize the value of teamwork and collaboration. I believe that great projects are the result of a collective effort, where each individual brings their unique strengths to the table. I actively seek opportunities to engage with like-minded professionals, fostering an environment of open communication and shared aspirations. Together, we can achieve remarkable things.</p>
           <p>In conclusion, my unwavering enthusiasm for new projects, coupled with my strong work ethic and commitment to excellence, positions me as an ideal candidate for any undertaking. I am ready to embrace the unknown, break new ground, and demonstrate the depth of my capabilities. Together, let us embark on a journey of innovation, leaving a lasting legacy in the projects we undertake.</p>

@@ -157,7 +157,7 @@
     font-size: 20px !important;
   }
   .Info p {
-    font-size: 10px !important;
+    font-size: 14px !important;
     color: black;
     letter-spacing: 0.5px !important;
   }
@@ -355,7 +355,7 @@ h5 {
 }
 .Info p {
   font-weight: 200;
-  font-size: 0.8vw;
+  font-size: 16px;
   letter-spacing: 1px;
 }
 .Images {

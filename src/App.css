@@ -250,12 +250,11 @@ ul {
 li {
   margin-left: 3vw;
   float: left;
-}
-li a {
   display: block;
   text-decoration: none;
   color: rgb(77, 77, 77);
   font-weight: 300;
+  cursor: pointer;
 }
 nav .Menu {
   display: none;

@@ -1,9 +1,12 @@
 import './App.css';
 import { GithubCard } from "github-user-repo-card";
-import { FaFacebook, FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { useEffect, useState } from 'react';
+import { Link } from 'react-scroll'
+
 import { SiAboutdotme } from 'react-icons/si';
 import { AiOutlineProject, AiOutlineArrowUp, AiOutlineQuestion } from 'react-icons/ai';
-import { useEffect, useState } from 'react';
+import { FaFacebook, FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
+
 import fetchRepoCount from './hooks/fetchRepoCount';
 
 const App = () => {
@@ -23,21 +26,21 @@ const App = () => {
         <p>😎 daddyDOT.github.io</p>
         <div className='Break'></div>
         <ul>
-          <li><a href="#Upper">Top</a></li>
-          <li><a href="#About">About me</a></li>
-          <li><a href="#Projects">Projects</a></li>
-          <li><a href="#Footer">Contact</a></li>
+          <li><Link activeClass="active" to="Upper" spy={true} smooth={true} duration={500}>Top</Link></li>
+          <li><Link activeClass="active" to="About" spy={true} smooth={true} duration={500}>About me</Link></li>
+          <li><Link activeClass="active" to="Projects" spy={true} smooth={true} duration={500}>Projects</Link></li>
+          <li><Link activeClass="active" to="Footer" spy={true} smooth={true} duration={500}>Contact</Link></li>
         </ul>
         <div className='Menu'>
-        <a href="#Upper"><AiOutlineArrowUp /></a>
-        <a href="#About"><SiAboutdotme /></a>
-        <a href="#Projects"><AiOutlineProject /></a>
-        <a href="#Footer"><AiOutlineQuestion /></a>
+          <Link activeClass="active" to="Upper" spy={true} smooth={true} duration={500}><AiOutlineArrowUp /></Link>
+          <Link activeClass="active" to="About" spy={true} smooth={true} duration={500}><SiAboutdotme /></Link>
+          <Link activeClass="active" to="Projects" spy={true} smooth={true} duration={500}><AiOutlineProject /></Link>
+          <Link activeClass="active" to="Footer" spy={true} smooth={true} duration={500}><AiOutlineQuestion /></Link>
         </div>
       </nav>
       
       {/* upper */}
-      <div className='Upper' id='Upper'>
+      <div className='Upper' name='Upper'>
         <div className='Heading'>
           <p className='Description'>A passionate and hard-working individual, interested in programming</p>
           <div className='Image'></div>
@@ -58,7 +61,7 @@ const App = () => {
       <hr />
 
       {/* about me */}
-      <div className='About' id='About'>
+      <div className='About' name='About'>
         <div className='Text'>
           <div className='Info'>
             <h5>ABOUT ME</h5>
@@ -75,7 +78,7 @@ const App = () => {
       </div>
 
       {/* projects */}
-      <div className='Projects' id='Projects'>
+      <div className='Projects' name='Projects'>
         <div className='Info'>
           <h5>PROJECTS</h5>
           <h2>There are currently {Projects} repositories signed as<br /><i>#project</i></h2>
@@ -92,7 +95,7 @@ const App = () => {
       </div>
 
       {/* footer */}
-      <div className='Footer' id='Footer'>
+      <div className='Footer' name='Footer'>
         <div className='Socials'>
           <div className='Icons'>
             <a href='https://www.linkedin.com/in/ahmed-spahi%C4%87-0b5016260/'><div className='Icon'><FaLinkedin /></div></a>
